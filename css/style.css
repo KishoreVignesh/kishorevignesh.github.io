@@ -1,0 +1,89 @@
+
+body,html {
+   width: 100%;
+   height: 100%;
+   margin: 0px;
+   display: flex;
+   box-sizing: border-box;
+
+
+   font-family: Charlie Text,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+   font-style: normal;
+}
+
+div#app {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+div#left-pane {
+    width: 300px;
+    box-shadow: 0px 0px 9px #F4F5F7;
+    background: #F4F5F7;
+    position: fixed;
+    display: block;
+    height: 100vh;
+}
+
+#left-pane a {
+    text-decoration: none;
+    color: #000;
+}
+
+#left-pane ol {
+    list-style: none;
+}
+
+#left-pane li {
+    font-size: 28px;
+    line-height: 2;
+    cursor: pointer;
+}
+
+div#resume {
+    display: none;
+    position: fixed;
+    right: 150px;
+    top: 15px;
+    background: #0052CC;
+    border: 1px solid #0052CC;
+    color: #F4F5F7;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+div#resume:hover{
+    background: #0047B3;
+    border: 1px solid #0047B3;
+    color: #F4F5F7;
+}
+
+span.bg-im{
+    background-image:url("/images/bg.jpg")
+}
+
+div#right-pane {
+    margin-left: 380px;
+    font-size: 23px;
+    text-align: justify;
+    margin-right: 50px;
+}
+
+span.bg-im {
+    background-image: url(/images/bg.jpg);
+    background-size: 670px;
+    display: block;
+    height: 500px;
+    width: 500px;
+    border-radius: 300px;
+    opacity: 0.8;
+    filter: grayscale(70%);
+    box-shadow: 1px 1px 57px grey;
+    float: right;
+    margin-top: 120px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
