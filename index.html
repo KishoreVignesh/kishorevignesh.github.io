@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Welcome!</title>
+		<title>Hi There!</title>
 		<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
@@ -9,8 +9,8 @@
 			<div id="resume">Resume</div>
 			<div id="left-pane">
 				<ol>
-					<li onclick="route('about')">About</li>
-					<li id="blogs">Blogs</li>
+					<li onclick="route('about')" id="nav_about">About</li>
+					<li onclick="route('blogs')" id="nav_blogs">Blogs</li>
 				<ol>
 			</div>
 			<div id="right-pane">
@@ -18,8 +18,10 @@
 		</div>
 		<script src="js/router.js" type="text/javascript">
 		</script>
+		<script src="js/blogs.js" type="text/javascript">
+		</script>
 		<script type="text/javascript">
-			route("about")
+			route("about");
 		</script>
 	</body>
 </html>
