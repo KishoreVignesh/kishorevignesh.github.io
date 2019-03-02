@@ -294,7 +294,7 @@ button.resume-print:hover {
         min-height: 29.7cm;
         padding: 1cm;
         margin: 0cm auto;
-        border: 1px #D3D3D3 solid;
+        border: none;
         border-radius: 5px;
         background: white;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -341,6 +341,11 @@ button.resume-print:hover {
 
     .resume-actions {
         display: none;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
     }
 }
 
