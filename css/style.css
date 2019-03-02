@@ -22,12 +22,13 @@ div#app {
 }
 
 div#left-pane {
-    width: 300px;
     box-shadow: 0px 0px 9px #F4F5F7;
     background: #F4F5F7;
-    position: fixed;
     display: block;
-    height: 100vh;
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 1px;
 }
 
 #left-pane a {
@@ -43,6 +44,11 @@ div#left-pane {
     font-size: 28px;
     line-height: 2;
     cursor: pointer;
+}
+
+div#left-pane ol li {
+    display: inline-block;
+    padding: 0px 15px;
 }
 
 div#resume {
@@ -70,9 +76,10 @@ span.bg-im{
 }
 
 div#right-pane {
-    margin: 50px 50px 50px 380px;
+    margin: 0px auto;
     font-size: 23px;
     text-align: justify;
+    padding: 0% 5% 5% 5%;
 }
 
 span.bg-im {
@@ -185,34 +192,30 @@ span.bg-im {
     margin-bottom: 5pt;
 }
 
+button.resume-print {
+    background: #0747A6;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 3px 4px #aaa;
+    cursor: pointer;
+    float: right;
+}
+
+button.resume-print:hover {
+    padding: 12px 35px;
+}
+
+.resume-actions {
+    margin: 10px 10px;
+    min-height: 35px;
+}
+
 @page {
     size: A4;
     margin: 0;
-}
-
-
-
-@media (max-width: 768px) {
-    div#left-pane {
-        position: static;
-        height: auto;
-        width: 100%;
-    }
-
-    div#left-pane {
-        margin: 5px;
-    }
-
-    div#left-pane ol li {
-        display: inline-block;
-        padding: 0px 15px;
-    }
-
-    div#right-pane {
-        margin: 15px;
-    }
-
-  
 }
 
 @media (max-width: 1400px) {
@@ -334,6 +337,10 @@ span.bg-im {
     
     .resume .skillset {
         margin-bottom: 5pt;
+    }
+
+    .resume-actions {
+        display: none;
     }
 }
 
