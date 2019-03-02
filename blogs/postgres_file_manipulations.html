@@ -1,0 +1,31 @@
+<h3>Postgres File Operations</h3>
+
+<p>
+    I always wonder how postgres c code manipulates direct files. For each table's insert, update or delete. It has to write to the file in the disk. I will answer the follwing qustions related to that.
+</p>
+
+<ol>
+    <li>
+        what api postgres utilizes in c language ?
+    </li>
+    <li>
+        How total file size is updated.
+    </li>
+</ol>
+
+
+<h4>After Database creation.</h4>
+<p>
+    Postgres does not create any files on the disk.
+
+    CREATE DATABASE bkv;
+</p>
+
+
+<h4>After table creation.</h4>
+<p>
+    Postgres does not create any files on the disk.
+
+    CREATE TABLE IF NOT EXISTS test (integer1 integer);
+</p>
+

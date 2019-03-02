@@ -3,6 +3,7 @@
 function resetTabSelections(){
     document.getElementById("nav_about").className="inactive";
     document.getElementById("nav_blogs").className="inactive";
+    document.getElementById("nav_resume").className="inactive";
 }
 
 
@@ -16,6 +17,9 @@ function route(text){
     else if (text === "about"){
         document.getElementById("nav_about").className="active";
         routeToAbout();
+    } else if (text === "resume"){
+        document.getElementById("nav_resume").className="active";
+        routeToResume();
     }
 }
 
@@ -45,6 +49,17 @@ function routeToBlogs(text){
 function routeToAbout(){
     var content_area = document.getElementById("right-pane");
         fetch("/blogs/about.html",{
+        }).then(function(response){
+            content_area.innerHTML=response.text().then(function(content){
+                content_area.innerHTML=content;
+            });
+      });
+}
+
+
+function routeToResume(){
+    var content_area = document.getElementById("right-pane");
+        fetch("/blogs/resume.html",{
         }).then(function(response){
             content_area.innerHTML=response.text().then(function(content){
                 content_area.innerHTML=content;
