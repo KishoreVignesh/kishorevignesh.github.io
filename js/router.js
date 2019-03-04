@@ -20,7 +20,12 @@ function route(text){
     } else if (text === "resume"){
         document.getElementById("nav_resume").className="active";
         routeToResume();
-    }
+    } 
+    
+    // else if (text === "detailed_resume"){
+    //     document.getElementById("nav_resume").className="active";
+    //     routeToDummy();
+    // }
 }
 
 function routeToBlogs(text){
@@ -60,6 +65,17 @@ function routeToAbout(){
 function routeToResume(){
     var content_area = document.getElementById("right-pane");
         fetch("/blogs/resume.html",{
+        }).then(function(response){
+            content_area.innerHTML=response.text().then(function(content){
+                content_area.innerHTML=content;
+            });
+      });
+}
+
+
+function routeToDummy(){
+    var content_area = document.getElementById("right-pane");
+        fetch("/blogs/dummy.html",{
         }).then(function(response){
             content_area.innerHTML=response.text().then(function(content){
                 content_area.innerHTML=content;

@@ -144,7 +144,7 @@ span.bg-im {
 
 .page {
     width: 21cm;
-    min-height: 29.7cm;
+    height: 29.7cm;
     padding: 1cm;
     margin: 0cm auto;
     border: 1px #D3D3D3 solid;
@@ -153,6 +153,7 @@ span.bg-im {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
 .resume > .content > .section .lang {
@@ -211,6 +212,46 @@ button.resume-print:hover {
 .resume-actions {
     margin: 10px 10px;
     min-height: 35px;
+}
+
+/**
+    Detailed Resume CSS
+**/
+
+.resume .date:before {
+    content: "Date : ";
+    color: #0747A6;
+}
+
+.resume .date {
+    padding: 2pt;
+    margin: 5pt 0pt 0pt 0pt;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.resume .project {
+    box-shadow: 1px 1px 5px #aaa;
+    border-radius: 10pt;
+    margin-bottom: 12pt;
+    padding: 5pt 40pt;
+}
+
+.resume .content.full{
+    width: 100%;
+}
+
+.resume .project li {
+    font-size: 15pt;
+    line-height: 2;
+}
+
+.resume .backend-tech:before {
+    content: "Backend : ";
+}
+
+.frontend-tech:before {
+    content: "Frontend : ";
 }
 
 @page {
